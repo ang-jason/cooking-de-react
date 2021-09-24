@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Recipe from './Recipe'
+import {RecipeContext} from './App'
 
-function RecipeList(props) {
-    const {
-        recipes, handleRecipeAdd, handleRecipeDelete
-    } = props
+function RecipeList({recipes}) {
+    const { handleRecipeAdd } = useContext(RecipeContext)
+
     return (
         <div className="grid grid-cols-2 divide-x h-screen">
         <div>
@@ -13,7 +13,6 @@ function RecipeList(props) {
                 <Recipe 
                     key={recipe.id} 
                     {...recipe} 
-                    handleRecipeDelete={handleRecipeDelete}
                     />)
             })
             }
