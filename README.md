@@ -1,3 +1,6 @@
+# This Branch is for cooking-de-react project and using useState props as buttons.
+For improve method refer to main branch
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
