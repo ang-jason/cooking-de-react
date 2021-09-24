@@ -17,7 +17,7 @@ function RecipeList(props) {
                     />)
             })
             }
-            <div className="p-3">
+            <div className="flex p-3 justify-center m-1">
         <button 
         className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
         onClick={handleRecipeAdd}
