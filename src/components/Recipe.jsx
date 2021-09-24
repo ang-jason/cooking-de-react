@@ -14,7 +14,7 @@ function Recipe(props) {
     } = props
     return (
     <div>    
-        <div className="border-b-2 border-pink-600">
+        <div className="border-b-2 border-pink-600 grid grid-flow-row auto-rows-max">
         <div className="grid grid-flow-col grid-cols-1 p-3">
             <h3 className="text-3xl my-1">{name}</h3>
 

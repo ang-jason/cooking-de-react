@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import Recipe from './Recipe'
 import {RecipeContext} from './App'
+import RecipeEdit from './RecipeEdit';
+
 
 function RecipeList({recipes}) {
     const { handleRecipeAdd } = useContext(RecipeContext)
@@ -24,11 +26,8 @@ function RecipeList({recipes}) {
         Add Recipe</button>
         </div>
         </div>
-        <div className="p-3">
-        <button 
-        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-        Add Recipe LEFT</button>
-
+        <div className="p-3 overflow-auto">
+        <RecipeEdit/>
         </div>
        
         </div>
