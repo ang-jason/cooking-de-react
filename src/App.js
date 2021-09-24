@@ -2,7 +2,7 @@
 
 function App() {
   return (
-    <div>
+    <div className="text-red-600">
       hello world j650n
     </div>
   );
