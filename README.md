@@ -5,7 +5,7 @@
 Netify: https://cooking-de-react.netlify.app/
 
 
-Site not expressly responsive to illustrate Reactivity vs css
+Site not expressly responsive; more to illustrate Reactivity vs CSS
 
 
 ## Getting Started with Create React App
