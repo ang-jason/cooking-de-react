@@ -5,6 +5,9 @@
 Netify: https://cooking-de-react.netlify.app/
 
 
+Site not expressly responsive to illustrate Reactivity vs css
+
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
