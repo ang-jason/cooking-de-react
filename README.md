@@ -1,6 +1,11 @@
-# This project cooking-de-react - a web cooking recipe with React
+# Cooking-de-react - a web cooking recipe with React
 
-# Getting Started with Create React App
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e7518916-9d3d-4036-9d10-1d577a110db5/deploy-status)](https://app.netlify.com/sites/cooking-de-react/deploys)
+
+Netify: https://cooking-de-react.netlify.app/
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
