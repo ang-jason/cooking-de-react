@@ -9,8 +9,14 @@ const LOCAL_STORAGE_KEY = 'cookingdereact.recipes'
 function App() {
 
   console.log(sampleRecipes)
+
   const [recipes, setRecipes] = useState(sampleRecipes)
 
+  // for edit function
+  const [selectedRecipeId, setSelectedRecipeId] = useState()
+  // to get the id of the selected recipe, if not do nothing (undefined)
+  const selectedRecipe = recipes.find(recipe => recipe.id === selectedRecipeId)
+  // console.log("selectedRecipe",selectedRecipe)
 
   // Load recipes from LocalStorage - only load once
   useEffect(() => {
@@ -36,13 +42,21 @@ function App() {
 
 
 
+  function handleRecipeChange(id,recipeChange){
+    const newRecipes=[...recipes]
+    const index = newRecipes.findIndex(r => r.id === id)
 
-  const recipeContextValue={
-    // handleRecipeAdd:handleRecipeAdd,
-    // key:value same text, just specific once
-    handleRecipeAdd,
-    handleRecipeDelete
+    newRecipes[index]=recipeChange
+
+    setRecipes(newRecipes)
   }
+
+  function handleRecipeSelect(id){
+
+    setSelectedRecipeId(id)
+
+  }
+
 
   function handleRecipeAdd(){
     const newRecipe = {
@@ -60,22 +74,35 @@ function App() {
         }
       ]
     }
-  
+    setSelectedRecipeId(newRecipe.id)
     setRecipes([...recipes, newRecipe])
   }
   
   function handleRecipeDelete(id){
+    if (setSelectedRecipeId != null && selectedRecipeId ===id){
+      setSelectedRecipeId(undefined)
+    }
     setRecipes(recipes.filter(recipe=> recipe.id !== id))
   }
 
 
-
+  const recipeContextValue={
+    // handleRecipeAdd:handleRecipeAdd,
+    // key:value same text, just specific once
+    handleRecipeAdd,
+    handleRecipeDelete,
+    handleRecipeSelect,
+    handleRecipeChange
+  }
 
 
   return (
       <RecipeContext.Provider value={recipeContextValue}>
         <RecipeList 
-          recipes={recipes}/>
+          recipes={recipes}
+          selectedRecipe={selectedRecipe}
+          />
+
       </RecipeContext.Provider>
 
       

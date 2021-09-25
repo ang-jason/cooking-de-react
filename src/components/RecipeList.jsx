@@ -4,7 +4,7 @@ import {RecipeContext} from './App'
 import RecipeEdit from './RecipeEdit';
 
 
-function RecipeList({recipes}) {
+function RecipeList({recipes,selectedRecipe}) {
     const { handleRecipeAdd } = useContext(RecipeContext)
 
     return (
@@ -27,7 +27,7 @@ function RecipeList({recipes}) {
         </div>
         </div>
         <div className="p-3 overflow-auto">
-        <RecipeEdit/>
+        {selectedRecipe && <RecipeEdit recipe={selectedRecipe}/>}
         </div>
        
         </div>
